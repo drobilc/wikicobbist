@@ -8,6 +8,9 @@ def prenesiPodatkeOKnjigi(url):
     #Dobis html spletne strani
     html = requests.get(url).text
 
+    #To bo treba popraviti
+    html = html.encode("latin1").decode("utf-8")
+
     #Pretvoris za parsanje
     html = BeautifulSoup(html, "html.parser")
 
